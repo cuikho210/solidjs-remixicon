@@ -100,8 +100,8 @@ fn get_icons(input_path: &String, output_path: &String) -> Vec<Icon> {
                 .to_str().unwrap()
                 .to_string();
 
-            let file_name = format!("Ri{}.tsx", name.to_case(Case::Pascal));
-            let output_path = format!("{}/{}", output_path, file_name);
+            let file_name = format!("Ri{}", name.to_case(Case::Pascal));
+            let output_path = format!("{}/{}.tsx", output_path, file_name);
 
             icons.push(Icon {
                 name, file_name, output_path,

@@ -1,0 +1,58 @@
+{
+  "name": "solidjs-remixicon",
+  "version": "0.0.1",
+  "description": "RemixIcon for SolidJS",
+  "keywords": [
+    "solidjs",
+    "remixicon",
+    "icon"
+  ],
+  "author": "Cuikho210 <tonykms210@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/cuikho210/solidjs-remixicon.git"
+  },
+  "homepage": "https://github.com/cuikho210/solidjs-remixicon",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "peerDependencies": {
+    "remixicon": "^4.2.0",
+    "solid-js": "^1.8.0"
+  },
+  "devDependencies": {
+    "solid-js": "^1.8.15",
+    "tsup": "^8.0.2",
+    "tsup-preset-solid": "^2.2.0",
+    "typescript": "^5.2.2"
+  },
+  "browser": {},
+  "exports": {
+    "solid": {
+      "development": "./dist/dev.jsx",
+      "import": "./dist/index.jsx"
+    },
+    "development": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/dev.js"
+      }
+    },
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "typesVersions": {},
+  "dependencies": {
+    "remixicon": "^4.2.0"
+  }
+}
