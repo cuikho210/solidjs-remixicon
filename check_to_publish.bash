@@ -1,18 +1,6 @@
 #!/usr/bin/bash
 
-# Up to date
-git submodule init
-git submodule update
-
-# Check diff in commit id
 latest_remixicon_commit_id=$(git --git-dir ./remixicon/.git log --format="%h" -n 1)
-
-if [ "$latest_remixicon_commit_id" = "$(cat ./latest_remixicon_commit_id)" ]; then
-	echo "No change"
-else
-	build_and_publish
-	update_remixicon_commit_id
-fi
 
 function build_and_publish() {
 	# Generate components
@@ -35,3 +23,16 @@ function update_remixicon_commit_id() {
 	git commit -m "Github actions: Auto update $(date)"
 	git push
 }
+
+# Up to date
+git submodule init
+git submodule update
+
+# Check diff in commit id
+if [ "$latest_remixicon_commit_id" = "$(cat ./latest_remixicon_commit_id)" ]; then
+	echo "No change"
+else
+	build_and_publish
+	update_remixicon_commit_id
+fi
+
