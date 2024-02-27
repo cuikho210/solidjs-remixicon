@@ -1,7 +1,6 @@
 on:
-  # schedule:
-  #   - cron: '32 4 * * *'
-  push
+  schedule:
+    - cron: '32 4 * * *'
 
 jobs:
   build:
