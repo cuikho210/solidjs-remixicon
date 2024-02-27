@@ -33,6 +33,6 @@ if [ "$latest_remixicon_commit_id" = "$(cat ./latest_remixicon_commit_id)" ]; th
 	echo "No change"
 else
 	build_and_publish
-	update_remixicon_commit_id
+	# update_remixicon_commit_id
 fi
 

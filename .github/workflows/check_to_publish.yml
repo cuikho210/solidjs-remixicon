@@ -15,3 +15,6 @@ jobs:
       
       - name: Check to build and publish
         run: bash ./check_to_publish.bash
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
