@@ -24,7 +24,7 @@ function update_remixicon_commit_id() {
 	git config --global user.name cuikho210 
 	git config --global user.email tonykms210@gmail.com 
 	git add -u
-	git commit -m "Github actions: Auto update $(date)"
+	git commit -m "feat: Update Remixicon $(date)"
 	git push
 }
 
@@ -32,7 +32,7 @@ function update_remixicon_commit_id() {
 if [ "$latest_remixicon_commit_id" = "$(cat ./latest_remixicon_commit_id)" ]; then
 	echo "No change"
 else
+	update_remixicon_commit_id
 	build_and_publish
-	# update_remixicon_commit_id
 fi
 
