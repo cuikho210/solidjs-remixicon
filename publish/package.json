@@ -22,7 +22,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "yarn run tsup"
   },
   "peerDependencies": {
     "remixicon": "^4.2.0",

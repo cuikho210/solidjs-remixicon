@@ -11,7 +11,7 @@ function build_and_publish() {
 	yarn --cwd ./publish build
 
 	# Publish
-	yarn --cwd ./publish semantic-release
+	yarn --cwd ./publish run semantic-release
 }
 
 function update_remixicon_commit_id() {
