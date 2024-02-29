@@ -6,18 +6,6 @@ git submodule update
 
 latest_remixicon_commit_id=$(git --git-dir ./remixicon/.git log --format="%h" -n 1)
 
-function build_and_publish() {
-	# Generate components
-	bash ./generate_components.bash
-
-	# Build
-	yarn --cwd ./publish install
-	yarn --cwd ./publish build
-
-	# Publish
-	yarn --cwd ./publish run semantic-release
-}
-
 function update_remixicon_commit_id() {
 	echo "$latest_remixicon_commit_id" > ./latest_remixicon_commit_id
 
@@ -33,6 +21,6 @@ if [ "$latest_remixicon_commit_id" = "$(cat ./latest_remixicon_commit_id)" ]; th
 	echo "No change"
 else
 	update_remixicon_commit_id
-	build_and_publish
+	bash ./build_and_publish.bash
 fi
 
