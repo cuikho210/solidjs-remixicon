@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+bash ./update_git_submodule.bash
+
 # Generate components
 bash ./generate_components.bash
 

@@ -1,8 +1,6 @@
 #!/usr/bin/bash
 
-# Up to date
-git submodule init
-git submodule update
+bash ./update_git_submodule.bash
 
 latest_remixicon_commit_id=$(git --git-dir ./remixicon/.git log --format="%h" -n 1)
 
