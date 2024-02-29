@@ -1,5 +1,7 @@
 #!/usr/bin/bash
 
+mkdir -p ./publish/src/icons
+
 cargo run \
 	--manifest-path ./cli/Cargo.toml \
 	-- \
