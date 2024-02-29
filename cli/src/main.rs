@@ -37,7 +37,7 @@ fn main() {
 
     generate_index_file(&icons, &cli.output);
 
-    println!("Done!");
+    println!("Generated {} icons!", icons.len());
 }
 
 fn generate_index_file(icons: &Vec<Icon>, output_path: &String) {
