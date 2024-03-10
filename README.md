@@ -5,6 +5,14 @@ RemixIcon for SolidJS
 + Daily check for updates to stay in sync with the RemixIcon repository.
 + Utilize CSS classes provided by the remixicon package instead of SVG for enhanced customizability.
 
+## Install
+
+```shell
+npm install --save solidjs-remixicon
+# or
+yarn add solidjs-remixicon
+```
+
 ## Usage
 Simply import and use it as an HTML element
 
