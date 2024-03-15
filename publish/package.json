@@ -52,8 +52,5 @@
       "default": "./dist/index.js"
     }
   },
-  "typesVersions": {},
-  "dependencies": {
-    "remixicon": "^4.2.0"
-  }
+  "typesVersions": {}
 }
