@@ -24,9 +24,11 @@
   "scripts": {
     "build": "yarn run tsup"
   },
+  "dependencies": {
+    "remixicon": "*"
+  },
   "peerDependencies": {
-    "remixicon": "^4.2.0",
-    "solid-js": "^1.8.0"
+    "solid-js": "*"
   },
   "devDependencies": {
     "semantic-release": "^23.0.2",
