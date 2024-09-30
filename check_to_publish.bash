@@ -9,7 +9,7 @@ function update_remixicon_commit_id() {
 
 	git config --global user.name cuikho210 
 	git config --global user.email tonykms210@gmail.com 
-	git add -u
+	git add -A
 	git commit -m "feat: Update Remixicon $(date)"
 	git push
 }
